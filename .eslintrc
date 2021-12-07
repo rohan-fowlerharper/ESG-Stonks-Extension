@@ -1,6 +1,26 @@
 {
-  "extends": "react-app",
+  "extends": [
+    "react-app"
+  ],
   "globals": {
     "chrome": "readonly"
+  },
+  "ignorePatterns": "build/",
+  "rules": {
+    "eol-last": [
+     "error",
+     "always"
+    ],
+    "no-multiple-empty-lines": [
+     "error",
+     {
+      "max": 1,
+      "maxEOF": 0,
+      "maxBOF": 0
+     }
+    ],
+    "object-curly-spacing": [2, "always"],
+    "react/prop-types": 0,
+    "semi": ["error", "never"]
   }
 }

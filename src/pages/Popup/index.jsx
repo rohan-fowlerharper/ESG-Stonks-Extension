@@ -1,9 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
 
-import Popup from './Popup';
-import './index.css';
+import { ChakraProvider } from '@chakra-ui/react'
 
-render(<Popup />, window.document.querySelector('#app-container'));
+import Popup from './Popup'
+import './index.css'
 
-if (module.hot) module.hot.accept();
+render(
+  <ChakraProvider>
+    <Popup />
+  </ChakraProvider>
+, window.document.querySelector('#app-container'))
+
+if (module.hot) module.hot.accept()
